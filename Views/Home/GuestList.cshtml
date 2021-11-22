@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+@using COP4020_Final_Project.Models;
+@{
+    ViewBag.Title = "List of Guests";
+}
+@{ 
+    List<Guest> guests = (List<Guest>)ViewData["guests"];
+}
+
+<body>
+    <div class="GuestList">
+        <h1>Here is the list of people attending the party</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Arrival Time</th>
+                <th>Request Parking</th>
+            </tr>
+            @foreach (Guest guest in guests)
+            {
+                <tr>
+                    <td>@guest.Name</td>
+                    <td>@guest.Age</td>
+                    <td>@guest.ArrivalTime</td>
+                    <td>@guest.Parking</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

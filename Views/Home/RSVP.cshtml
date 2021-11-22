@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+@{
+    ViewBag.Title = "RSVP";
+}
+@model Guest;
+
+<body>
+    <div class="RSVP">
+        <h1>RSVP</h1>
+        <form name="rsvp" method="post">
+            <div asp-validation-summary="All"></div>
+            <label for="name">Your name:</label><br />
+            <input type="text" id="name" name="name" asp-for="Name" /><p />
+            <label for="age">Your age:</label><br />
+            <input type="number" id="age" name="age" asp-for="Age"/><p />
+            <label for="time">Arrival Time:</label><br />
+            <input type="time" id="time" name="time" asp-for="ArrivalTime" /><p />
+            <label for="parking">Request parking?</label><br />
+            <select name="parking" id="parking" asp-for="Parking">
+                <option value="" selected disabled hidden>Choose an option</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select><p />
+            <input type="submit" name="submit" value="Submit RSVP" />
+        </form>
+    </div>
+</body>
+</html>

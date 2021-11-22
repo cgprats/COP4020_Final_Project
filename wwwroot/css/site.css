@@ -1,0 +1,83 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+button {
+    background-color: blue;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 14px;
+}
+
+input[type=submit] {
+    background-color: blue;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 14px;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+.Home {
+    text-align: center;
+}
+
+.GuestList {
+    text-align: center;
+}
+
+.Gallery {
+    text-align: left;
+}
+
+    .Gallery img {
+        height: 113px;
+        width: 150px;
+    }
+
+.About {
+    text-align: left;
+    padding: 10px 14px;
+}
+
+    .About a {
+        color: blue;
+    }
+
+.RSVP {
+}
+
+    .RSVP h1 {
+        text-align: center;
+        color: white;
+        background-color: royalblue;
+    }
+
+    .RSVP li {
+        color: red;
+    }
+
+#details {
+    background-color: orange;
+} 
