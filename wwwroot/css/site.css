@@ -39,6 +39,15 @@ button:hover {
     background-color: darkblue;
 }
 
+table, th, td {
+    width: 75%;
+    table-layout: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-color: gray;
+}
+
 .Home {
     text-align: center;
 }
