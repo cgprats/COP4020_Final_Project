@@ -17,17 +17,9 @@ body {
   margin-bottom: 60px;
 }
 
-button {
-    background-color: blue;
-    border: none;
-    color: white;
-    text-align: center;
-    display: inline-block;
-    padding: 10px 14px;
-}
-
-input[type=submit] {
-    background-color: blue;
+button, input[type=submit] {
+    background-color: royalblue;
+    border-radius: 4px;
     border: none;
     color: white;
     text-align: center;
