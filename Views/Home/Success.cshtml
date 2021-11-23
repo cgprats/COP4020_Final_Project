@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+@{
+    ViewBag.Title = "Success";
+}
+@model Guest;
+@{
+    string guest = (string)ViewData["guest"];
+}
+
+<body>
+    <div class="Home">
+        <h1>Thank you, @guest!</h1>
+        <p>It's great that you're coming. The drinks are already in the fridge!</p>
+        <p>Click <a asp-controller="Home" asp-action="GuestList">here</a> to see who is coming.</p>
+    </div>
+</body>
+</html>

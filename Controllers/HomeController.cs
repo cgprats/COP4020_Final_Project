@@ -31,11 +31,6 @@ namespace COP4020_Final_Project.Controllers
 
         public IActionResult GuestList()
         {
-            String output = "Guests: \n";
-            for (int i = 0; i < guests.Count; i++)
-            {
-                output += guests[i].Name + "\n";
-            }
             ViewData["guests"] = guests;
             return View();
         }
@@ -54,6 +49,7 @@ namespace COP4020_Final_Project.Controllers
             if (ModelState.IsValid)
             {
                 guests.Add(guest);
+                return RedirectToAction("Success");
             }
             return View();
         }
@@ -61,6 +57,11 @@ namespace COP4020_Final_Project.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public IActionResult Success()
+        {
+            ViewData["guest"] = guests[guests.Count - 1].Name;
+            return View();
         }
     }
 }

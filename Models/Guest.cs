@@ -7,10 +7,12 @@ namespace COP4020_Final_Project.Models
         [Required(ErrorMessage = "Please enter your name")]
         public string? Name { get; set; }
         [Required(ErrorMessage = "Please enter your age")]
-        public int Age { get; set; }
+        public int? Age { get; set; }
         [Required(ErrorMessage = "Please enter your arrival time")]
-        public DateTime ArrivalTime { get; set; }
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "0:H:mm")]
+        public DateTime? Arrival { get; set; }
         [Required(ErrorMessage = "Please specify whether or not you require parking assistance")]
-        public bool Parking { get; set; }
+        public bool? Parking { get; set; }
     }
 }
